@@ -2,16 +2,23 @@ let express = require('express');
 let app = express();
 
 
+//challenge1
+//console.log("Hello World")
 
 
+//app.get("/", (req, res)  =>{
+//    res.send("Hello Express")
+//})
+
+app.use("/public", express.static(__dirname + "/public"))
 
 
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/views/index.html");
+});
 
 
-
-
-
-
+app.get("/json",)
 
 
 
